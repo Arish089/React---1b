@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+            display: flex;
+            background-color: bisque;
+            border: 2px solid black;
+        }
+        .txt{
+            font-weight: 500;
+            font-size: 32px;
+            margin-right: 500px;
+            margin-top: 0px;
+        }
+        .child1{
+            width: 80px;
+            background-color: red;
+            height: 80px;
+            border: 2px solid black;
+            margin: 20px;
+            font-weight: 800;
+            font-size: 25px;
+            
+        }
+        
+        .child2{
+            width: 80px;
+            background-color: yellow;
+            height: 80px;
+            border: 2px solid black;
+            margin: 20px;
+            font-weight: 800;
+            font-size: 25px;
+        }
+        .child3{
+            width: 80px;
+            background-color: green;
+            height: 80px;
+            border: 2px solid black;
+            margin: 20px;
+            font-weight: 800;
+            font-size: 25px;
+        }
+        
+        .child4{
+            width: 80px;
+            background-color: purple;
+            height: 80px;
+            border: 2px solid black;
+            margin: 20px;
+            font-weight: 800;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script>
+        let element = React.createElement('div', {id : "parent",children : [ 
+            React.createElement('p',{className : "txt"},"parent"),
+            React.createElement('div',{className : "child1"},"1"),
+            React.createElement('div',{className : "child2"},"2"),
+            React.createElement('div',{className : "child3"},"3"),
+            React.createElement('div',{className : "child4"},"4"),
+        ]
+
+    })
+    let reactRoot = ReactDOM.createRoot(document.getElementById('root'));
+    reactRoot.render(element);
+    </script>
+    
+</body>
+</html>
